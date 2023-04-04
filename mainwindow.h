@@ -19,7 +19,24 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    //Got this from lecture
+    void actionNew();
+    void actionOpen();
+    void actionSave();
+    void actionSaveAs();
+    void actionClose();
+
 private:
     Ui::MainWindow *ui;
+
+    QString _filename{""};
+    void createActions();
+    void setupMenuBar();
+    void setupToolBar();
+    void setupMenu();
+    void init();
+
 };
 #endif // MAINWINDOW_H
