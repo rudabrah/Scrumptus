@@ -17,10 +17,10 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>80</y>
-      <width>591</width>
-      <height>431</height>
+      <x>0</x>
+      <y>0</y>
+      <width>781</width>
+      <height>461</height>
      </rect>
     </property>
    </widget>
@@ -58,7 +58,11 @@
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+  </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
