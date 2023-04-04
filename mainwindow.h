@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFile>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QTextStream>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +19,30 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    //Got this from lecture
+    void actionNew();
+    void actionOpen();
+    void actionSave();
+    void actionSaveAs();
+    void actionClose();
+
+    void on_actionOpen_triggered();
+
+    void on_actionNew_triggered();
+
+    void on_actionSave_triggered();
+
 private:
     Ui::MainWindow *ui;
+
+    QString _filename{""};
+    void createActions();
+    void setupMenuBar();
+    void setupToolBar();
+    void setupMenu();
+    void init();
+
 };
 #endif // MAINWINDOW_H
